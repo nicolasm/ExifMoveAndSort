@@ -1,0 +1,17 @@
+ExifMoveAndSort
+---------------
+
+This AppleScript must be used in conjonction with a Hazel rule n a source folders where
+photos are downloaded or stored.
+
+It requires ExifTool that can be found here: http://www.sno.phy.queensu.ca/~phil/exiftool/
+
+Source folders have to be set in the script file.
+
+Target folders have to be set respectively to their source.
+
+Photos are organized into the following folder hierarchy:
+<YYYY>  / <m - month>
+
+The locale is forced to fr_FR.UTF-8 because Hazel is using its own settings. Of course
+if you don't need a special locale you may get rid of that part of the code.
