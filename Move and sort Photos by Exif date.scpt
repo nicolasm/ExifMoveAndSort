@@ -37,9 +37,9 @@ on hazelProcessFile(theFile)
 		end if
 		
 		-- Prepare the command
-		set EXIFTOOL to Â
-			"exiftool \"-Directory<DateTimeOriginal\" -d \"/path/to/target/%Y/%m - %B/" & dest Â
-			& Â
+		set EXIFTOOL to Â¬
+			"exiftool \"-Directory<DateTimeOriginal\" -d \"/path/to/target/%Y/%m - %B/" & dest Â¬
+			& Â¬
 			"\" " & quoted form of unixPath
 		
 		-- Ensure Phoenix Slides and PhotoSync are not running
@@ -49,20 +49,20 @@ on hazelProcessFile(theFile)
 		if phoenixCount = 0 and photoSyncCount = 0 then
 			
 			-- Execute the shell script
-			do shell script LANG Â
-				& Â
-				"; " & LC_COLLATE Â
-				& Â
-				"; " & LC_CTYPE Â
-				& Â
-				"; " & LC_MESSAGES Â
-				& Â
-				"; " & LC_MONETARY Â
-				& Â
-				"; " & LC_NUMERIC Â
-				& Â
-				"; " & LC_TIME Â
-				& Â
+			do shell script LANG Â¬
+				& Â¬
+				"; " & LC_COLLATE Â¬
+				& Â¬
+				"; " & LC_CTYPE Â¬
+				& Â¬
+				"; " & LC_MESSAGES Â¬
+				& Â¬
+				"; " & LC_MONETARY Â¬
+				& Â¬
+				"; " & LC_NUMERIC Â¬
+				& Â¬
+				"; " & LC_TIME Â¬
+				& Â¬
 				"; " & EXIFTOOL
 		end if
 		
