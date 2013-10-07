@@ -39,7 +39,6 @@ env['LANG'] = 'fr_FR.UTF-8'
 
 # Ensure Phoenix Slides and PhotoSync are not running
 if not (is_running("Phoenix Slides\.app") or is_running("PhotoSync\.app")):
-    print 1
     s = subprocess.Popen(["exiftool", "-Directory<DateTimeOriginal", "-d", "/path/to/target/%Y/%m - %B/" + target, path], stdout=subprocess.PIPE, env = env)
     message = ""
     for x in s.stdout:
