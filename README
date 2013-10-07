@@ -1,8 +1,8 @@
 ExifMoveAndSort
 ---------------
 
-This AppleScript must be used in conjonction with a Hazel rule and a source folder where
-photos are downloaded or stored.
+Choose the AppleScript or the Python script. Then use it in conjonction with a Hazel rule
+and a source folder where photos are downloaded or stored.
 
 It requires ExifTool that can be found here: http://www.sno.phy.queensu.ca/~phil/exiftool/
 
