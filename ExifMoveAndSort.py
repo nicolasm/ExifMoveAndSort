@@ -24,7 +24,10 @@ def is_running(process):
     return False
 
 file = sys.argv[1]
-path = os.path.dirname(os.path.abspath(file))
+if os.path.isdir(file):
+    path = file
+else:
+    path = os.path.dirname(os.path.abspath(file))
 
 target = ""
 # Set the final directory according to the source

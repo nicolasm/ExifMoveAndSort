@@ -4,6 +4,9 @@ ExifMoveAndSort
 Choose the AppleScript or the Python script. Then use it in conjonction with a Hazel rule
 and a source folder where photos are downloaded or stored.
 
+Note that the Python script can also be used as a standalone script. Just call it with
+a path and you're good to go.
+
 It requires ExifTool that can be found here: http://www.sno.phy.queensu.ca/~phil/exiftool/
 
 Source folders have to be set in the script file.
