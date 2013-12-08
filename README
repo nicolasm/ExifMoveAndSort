@@ -21,4 +21,4 @@ if you don't need a special locale you may get rid of that part of the code.
 
 I use PhotoReviewer (http://www.sticksoftware.com/software/PhotoReviewer.html) to transfer
 my camera photos and PhotoSync (http://www.photosync-app.com/) to download my iPhone
-photos. The script ensure neither are running before trying to move photos.
+photos. The script ensures neither are running before trying to move photos.

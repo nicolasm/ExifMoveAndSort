@@ -42,11 +42,12 @@ on hazelProcessFile(theFile)
 			& ¬
 			"\" " & quoted form of unixPath
 		
-		-- Ensure Phoenix Slides and PhotoSync are not running
+		-- Ensure PhotoReviewer, Phoenix Slides and PhotoSync are not running
+		tell application "System Events" to set reviewerCount to the count of (processes whose name is "PhotoReviewer")
 		tell application "System Events" to set phoenixCount to the count of (processes whose name is "Phoenix Slides")
 		tell application "System Events" to set photoSyncCount to the count of (processes whose name is "PhotoSync")
 		
-		if phoenixCount = 0 and photoSyncCount = 0 then
+		if reviewerCount = 0 and phoenixCount = 0 and photoSyncCount = 0 then
 			
 			-- Execute the shell script
 			do shell script LANG ¬
