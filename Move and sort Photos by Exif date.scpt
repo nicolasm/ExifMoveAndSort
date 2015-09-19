@@ -38,7 +38,7 @@ on hazelProcessFile(theFile)
 		
 		-- Prepare the command
 		set EXIFTOOL to ¬
-			"exiftool \"-Directory<DateTimeOriginal\" -d \"/path/to/target/%Y/%m - %B/" & targetDir ¬
+			"/usr/local/bin/exiftool \"-Directory<DateTimeOriginal\" -d \"/path/to/target/%Y/%m - %B/" & targetDir ¬
 			& ¬
 			"\" " & quoted form of unixPath
 		
