@@ -4,7 +4,7 @@
 # ExifMoveAndSort by Nicolas Meier
 # Move and sort pictures by using Exiftool and Hazel
 # https://github.com/nicolasm/ExifMoveAndSort
-# Last revsion: Oct 6, 2013
+# Last revsion: Sept 19, 2015
 # Pictures are moved to the Photos repository and sorted by Exif original date
 # ExifTool (http://www.sno.phy.queensu.ca/~phil/exiftool/)
 
@@ -42,7 +42,7 @@ env['LANG'] = 'fr_FR.UTF-8'
 
 # Ensure PhotoReviewer, Phoenix Slides and PhotoSync are not running
 if not (is_running("PhotoReviewer\.app") or is_running("Phoenix Slides\.app") or is_running("PhotoSync\.app")):
-    s = subprocess.Popen(["exiftool", "-Directory<DateTimeOriginal", "-d", "/path/to/target/%Y/%m - %B/" + target, path], stdout=subprocess.PIPE, env = env)
+    s = subprocess.Popen(["/usr/local/bin/exiftool", "-Directory<DateTimeOriginal", "-d", "/path/to/target/%Y/%m - %B/" + target, path], stdout=subprocess.PIPE, env = env)
     message = ""
     for x in s.stdout:
         message = message + x
